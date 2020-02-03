@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TeamComponent } from './team/team.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeamComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
