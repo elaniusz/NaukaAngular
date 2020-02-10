@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TeamComponent } from './team/team.component';
-import { TitleComponent } from './title/title.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StronaMaterialModule } from './strona-material/strona-material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TeamComponent,
-    TitleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    StronaMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
