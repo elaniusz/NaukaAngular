@@ -23,4 +23,4 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSelectModule, MatCardModule, MatFormFieldModule, BrowserAnimationsModule, MatGridListModule
      ]
 })
-export class StronaMaterialModule { }
+export class AppMaterialModule { }

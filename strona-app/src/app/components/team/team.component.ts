@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamBaseService, Team } from 'src/app/services/team-base.service';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  teams: Array<Team>;
+  constructor(private dbService: TeamBaseService) { }
 
   ngOnInit() {
+    this.dbService.getTeams().subscribe(List => {
+      this.teams = List;
+    });
   }
 
 }
