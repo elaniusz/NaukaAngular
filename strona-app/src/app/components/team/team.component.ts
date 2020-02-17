@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TeamBaseService, Item } from 'src/app/services/team-base.service';
+import { TeamBaseService, Team } from 'src/app/services/team-base.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -8,12 +8,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent implements OnInit {
-  teams$: Observable<Array<Item>>;
+  teams$: Observable<Array<Team>>;
 
   constructor(private dbService: TeamBaseService) { }
 
   ngOnInit() {
     this.teams$ = this.dbService.getTeams();
   }
-
 }

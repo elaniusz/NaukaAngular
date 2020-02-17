@@ -6,23 +6,25 @@ import { Observable, of} from 'rxjs';
 })
 export class TeamBaseService {
 
-  TEAMS = [
-    new Item('1', 'Marek Michalik', 'michalikmm@gmail.com', 'Proboszcz parafii Ewangelickiej w Wiśle Czarnem'),
-    new Item('2', 'Joanna Michalik', 'amichalik83@gmail.com', 'Żona proboszcza w Czarnem'),
-    new Item('3', 'Kubegunda Bystra', 'kunegunda@luteranie.pl', 'Główna ławkowa siędząca z tyłu kościoła'),
-    new Item('4', 'Grzegorz Brzęczyszczykiewicz', 'jarozpetalem@gmail.com', 'Zawsze śpi na naboeństwie ak kazanie jest ponad 10 minut')
+  private teams = [
+    {id: '1', name: 'Marek Michalik', email: 'michalikmm@gmail.com', details: 'Proboszcz parafii Ewangelickiej w Wiśle Czarnem'},
+    {id: '2', name: 'Joanna Michalik', email: 'michalikmm@gmail.com', details: 'Żona proboszcza w Czarnem'},
+    {id: '3', name: 'Kubegunda Bystra', email: 'michalikmm@gmail.com', details: 'Główna ławkowa siędząca z tyłu kościoła'},
+    // tslint:disable-next-line: max-line-length
+    {id: '4', name: 'Grzegorz Brzęczyszczykiewicz', email: 'michalikmm@gmail.com', details: 'Zawsze śpi na naboeństwie ak kazanie jest ponad 10 minut'}
   ];
 
-  getTeams(): Observable<Array<Item>> {
-    return of(this.TEAMS);
+  getTeams(): Observable<Array<Team>> {
+    return of(this.teams);
   }
 
-  getTeamsById(id: string): Item {
-    return this.TEAMS.find(e => e.id === id);
+  getTeamsById(id: string): Team {
+    return this.teams.find(e => e.id === id);
   }
-
 }
 
-export class Item {
-  constructor(public id: string, public name: string, public email: string, public details: string) {}
+export interface Team {
+  id: string;
+  name: string;
+  details: string;
 }

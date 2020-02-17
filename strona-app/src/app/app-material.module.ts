@@ -10,17 +10,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+    CommonModule
   ],
   exports: [
     CommonModule, MatMenuModule, MatToolbarModule, MatIconModule, MatButtonModule, MatInputModule,
-    MatSelectModule, MatCardModule, MatFormFieldModule, BrowserAnimationsModule, MatGridListModule
+    MatSelectModule, MatCardModule, MatFormFieldModule, BrowserAnimationsModule, MatGridListModule, MatDialogModule
      ]
 })
 export class AppMaterialModule { }
