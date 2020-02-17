@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TeamBaseService, Team } from 'src/app/services/team-base.service';
+import { TeamBaseService, Item } from 'src/app/services/team-base.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-team',
@@ -7,14 +8,12 @@ import { TeamBaseService, Team } from 'src/app/services/team-base.service';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent implements OnInit {
+  teams$: Observable<Array<Item>>;
 
-  teams: Array<Team>;
   constructor(private dbService: TeamBaseService) { }
 
   ngOnInit() {
-    this.dbService.getTeams().subscribe(List => {
-      this.teams = List;
-    });
+    this.teams$ = this.dbService.getTeams();
   }
 
 }
