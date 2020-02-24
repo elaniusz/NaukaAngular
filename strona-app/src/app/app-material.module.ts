@@ -10,7 +10,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -20,7 +19,7 @@ import {MatDialogModule} from '@angular/material/dialog';
   ],
   exports: [
     CommonModule, MatMenuModule, MatToolbarModule, MatIconModule, MatButtonModule, MatInputModule,
-    MatSelectModule, MatCardModule, MatFormFieldModule, BrowserAnimationsModule, MatGridListModule, MatDialogModule
+    MatSelectModule, MatCardModule, MatFormFieldModule, BrowserAnimationsModule, MatGridListModule
      ]
 })
 export class AppMaterialModule { }
